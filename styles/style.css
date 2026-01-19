@@ -252,7 +252,7 @@
   height: 21px;
 }
 
-/* Иконка сердца */
+/* Иконка сердечка */
 .like-icon .contour {
   transition-property: fill;
   transition-duration: 0.3s;
