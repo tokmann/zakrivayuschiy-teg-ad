@@ -6,8 +6,7 @@
   background-attachment: fixed;
   background-size: cover;
   background-image: var(--background-image);
-  font-family: sans-serif;
-  font-family: var(--font-primary);
+  font-family: var(--font-primary), sans-serif;
 }
 
 /* Контейнер */
@@ -110,7 +109,6 @@
 }
 
 .main__card:nth-child(2) .card__image-item {
-  filter: sepia(100%);
   filter: sepia(1);
 }
 
@@ -119,17 +117,14 @@
 }
 
 .main__card:nth-child(4) .card__image-item {
-  filter: invert(100%);
   filter: invert(1);
 }
 
 .main__card:nth-child(5) .card__image-item {
-  filter: grayscale(100%);
   filter: grayscale(1);
 }
 
 .main__card:nth-child(6) .card__image-item {
-  filter: brightness(400%);
   filter: brightness(4);
 }
 
@@ -138,7 +133,6 @@
 }
 
 .main__card:nth-child(8) .card__image-item {
-  filter: brightness(200%) contrast(500%);
   filter: brightness(2) contrast(5);
 }
 
