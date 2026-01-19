@@ -1,1 +1,85 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  /* Цветовая схема для светлой темы */
+  --bg-color: #fff;
+  --color-accent: #000;
+  --color-primary: #fff;
+  --border-color: #000;
+  --button-border-color: #000;
+  --label-border-color: #fff;
+  --backdrop-color: rgba(0, 0, 0, 0.75);
+
+  /* Переменные для сердца */
+  --heart-contour-color: #000000;
+  --heart-core-color: #ffffff;
+  --heart-main-body-color: rgb(255, 0, 0);
+  --heart-fill-color: #ff0000;
+  --heart-sparks-color: #ff0000;
+
+  /* Типографика */
+  --font-primary: "Inter-Variable";
+  --font-accent: "PressStart2P";
+  --font-weight-card-topic: 700;
+  --font-weight-card-text: 400;
+
+  /* Размеры */
+  --title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --container-width: clamp(23.4375rem, 16.2852rem + 30.5164svi, 43.75rem);
+
+  /* Фоновое изображение */
+  --background-image:
+    repeating-linear-gradient(
+      to right,
+      rgb(211, 211, 211) 0px,
+      rgb(211, 211, 211) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(to bottom, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+}
+
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Обновленные цвета для темной темы */
+    --bg-color: #000;
+    --color-primary: #00cc14;
+    --color-accent: #00cc14;
+    --border-color: #00cc14;
+    --button-border-color: rgb(0, 204, 20);
+    --label-border-color: #fff;
+    --backdrop-color: rgba(0, 204, 20, 0.75);
+
+    /* Переменные для сердца в темной теме */
+    --heart-contour-color: #00cc14;
+    --heart-core-color: #fff;
+    --heart-main-body-color: #ff0000;
+    --heart-sparks-color: rgb(255, 0, 0);
+    --heart-fill-color: #ff0000;
+
+    /* Размеры остаются прежними */
+    --title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --container-width: clamp(23.4375rem, 16.2852rem + 30.5164svi, 43.75rem);
+
+    /* Фон для темной темы */
+    --background-image:
+      repeating-linear-gradient(to right, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(to bottom, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  }
+}
+
+/* Мобильная адаптация */
+@media (width <= 375px) {
+  :root {
+    --title-font-size: clamp(2.625rem, 0.0795rem + 12.7273vw, 3.0625rem);
+    --container-width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  :root {
+    --title-font-size: clamp(2.625rem, 0.0795rem + 12.7273vw, 3.0625rem);
+    --container-width: 100%;
+  }
+}
